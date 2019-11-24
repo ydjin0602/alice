@@ -1,12 +1,16 @@
-# coding: utf-8
 from __future__ import unicode_literals
 import json
 import logging
 from flask import Flask, request
-app = Flask(__name__)
-logging.basicConfig(level=logging.DEBUG)
-@app.route("/", methods=['POST'])
 
+
+app = Flask(__name__)
+
+
+logging.basicConfig(level=logging.DEBUG)
+
+
+@app.route("/", methods=['POST'])
 def main():
     logging.info('Request: %r', request.json)
     response = {
